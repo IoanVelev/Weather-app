@@ -1,0 +1,38 @@
+
+body {
+    background-color:cornflowerblue;
+}
+.box-field{
+    height: 30em;
+    background-color: antiquewhite;
+    margin: auto;
+    width: 50%;
+    border: 3px solid white;
+    padding: 50px;
+}
+
+.box-field #input-field {
+    border-style: solid;
+    border-radius: 10em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.box-field .input {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.box-field .title {
+    font-size: 2em;
+    text-align: center;
+    font-family: cursive;
+    color:navy;
+}
+.input .search-button {
+    border-style: solid;
+    border-radius: 10em;
+    text-align: center;
+    font-size: 1em;
+}
+
