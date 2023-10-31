@@ -35,4 +35,13 @@ body {
     text-align: center;
     font-size: 1em;
 }
+.weather-info .degrees, .location {
+font-family: cursive;
+font-size: 1.5em;
+}
+
+.weather-info .image {
+    font-size: 2px;
+    height: 3cm;
+}
 
