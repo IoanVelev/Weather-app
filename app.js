@@ -22,11 +22,12 @@ function getResult(cityName) {
   if (inputField.value !== "") {
     inputField.value = "";
 
-      fetch(`${api.base}weather?q=${cityName}&appid=${api.key}&units=metric`)
+    fetch(`${api.base}weather?q=${cityName}&appid=${api.key}&units=metric`)
       .then((weather) => weather.json())
       .then((data) => displayResults(data))
-      .catch((error) => {return city.textContent = `Invalid city name, please try again`});
-    
+      .catch((error) => {
+        return (city.textContent = `Invalid city name, please try again`);
+      });
   }
 }
 
