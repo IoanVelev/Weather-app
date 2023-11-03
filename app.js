@@ -21,29 +21,44 @@ function setQuery() {
 function getResult(cityName) {
   if (inputField.value !== "") {
     inputField.value = "";
-    fetch(`${api.base}weather?q=${cityName}&appid=${api.key}&units=metric`)
+
+      fetch(`${api.base}weather?q=${cityName}&appid=${api.key}&units=metric`)
       .then((weather) => weather.json())
-      .then((data) => displayResults(data));
+      .then((data) => displayResults(data))
+      .catch((error) => {return city.textContent = `Wrong city name, please try again`});
+    
   }
 }
 
 function displayResults(data) {
-  console.log(data.weather);
-  if (data.weather[0].main == "Clouds") {
-    image.src = "images/clouds.png";
-  } else if (data.weather[0].main  == "Rain") {
-    image.src = "images/rain.png";
-  } else if (data.weather[0].main == "Clear") {
-    image.src = "images/clear.png";
-  } else if (data.weather[0].main == "Wind") {
-    image.src = "images/wind.png";
-  } else if (data.weather[0].main == "Drizzle") {
-    image.src = "images/drizzle.png";
-  } else if (data.weather[0].main == "Snow") {
-    image.src = "images/snow.png";
-  } else if (data.weather[0].main == "Mist") {
+  const icon = data.weather[0].icon;
+  //console.log(data.weather[0]);
+  if (icon === "01n") {
+    image.src = "images/clearnight.png";
+  } else if (icon === "01d") {
+    image.src = "images/clear_day.png";
+  } else if (icon === "02n") {
+    image.src = "images/cloudy_night.png";
+  } else if (icon === "02d") {
+    image.src = "images/clody_day.png";
+  } else if (icon === "03d" || icon === "03n") {
+    image.src = "images/scattered_clouds.png";
+  } else if (icon === "04d" || icon === "04n") {
+    image.src = "images/broken_clouds.png";
+  } else if (icon === "09d" || icon === "09n") {
+    image.src = "images/shower_rain.png";
+  } else if (icon === "10n") {
+    image.src = "images/rain_night.png";
+  } else if (icon === "10d") {
+    image.src = "images/day_rain.png";
+  } else if (icon === "11d" || icon === "11n") {
+    image.src = "images/thunderstorm.png";
+  } else if (icon === "13d" || icon === "13n") {
+    image.src = "images/snow2.png";
+  } else if (icon === "50d" || icon === "50n") {
     image.src = "images/mist.png";
   }
-  city.textContent = data.name;
+
+  city.textContent = `${data.name}, ${data.sys.country}`;
   degreesInfo.textContent = Math.round(data.main.temp) + "°C";
 }
