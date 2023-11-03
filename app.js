@@ -25,14 +25,13 @@ function getResult(cityName) {
       fetch(`${api.base}weather?q=${cityName}&appid=${api.key}&units=metric`)
       .then((weather) => weather.json())
       .then((data) => displayResults(data))
-      .catch((error) => {return city.textContent = `Wrong city name, please try again`});
+      .catch((error) => {return city.textContent = `Invalid city name, please try again`});
     
   }
 }
 
 function displayResults(data) {
   const icon = data.weather[0].icon;
-  //console.log(data.weather[0]);
   if (icon === "01n") {
     image.src = "images/clearnight.png";
   } else if (icon === "01d") {
