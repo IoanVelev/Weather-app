@@ -26,6 +26,8 @@ function getResult(cityName) {
       .then((weather) => weather.json())
       .then((data) => displayResults(data))
       .catch((error) => {
+        image.src = '';
+        degreesInfo.textContent = '';
         return (city.textContent = `Invalid city name, please try again`);
       });
   }
