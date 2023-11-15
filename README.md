@@ -2,7 +2,7 @@ This is basic web weather app. It assembles data from OpenWeatherMap.
 
 
 About OpenWeatherMap API:
-OpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location.
+OpenWeatherMap is an online service, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location.
 
 OpenWeatherMap link: https://openweathermap.org/
 
