@@ -7,6 +7,8 @@ OpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides glo
 OpenWeatherMap link: https://openweathermap.org/
 
 
-Linkt to my weather app: https://ioanvelev.github.io/Weather-app/
+Link to my weather app: https://ioanvelev.github.io/Weather-app/
+
+Screenshot:
 
 ![image](https://github.com/IoanVelev/Weather-app/assets/131281353/a4c03150-c3b0-47c1-9f2f-367ddbd7a007)
